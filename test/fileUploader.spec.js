@@ -83,7 +83,8 @@ describe('module: FileUploader', function () {
                 el: document.body,
                 previewEl: document.body,
                 allowMultiple: false,
-                extraData: {}
+                extraData: {},
+                filesParam: 'files'
             });
 
             expect(fileUploader.init).toHaveBeenCalled();
@@ -106,7 +107,8 @@ describe('module: FileUploader', function () {
                 previewEl: document.querySelector('#parent'),
                 allowMultiple: true,
                 url: '/upload',
-                extraData: {}
+                extraData: {},
+                filesParam: 'files'
             });
         });
     });

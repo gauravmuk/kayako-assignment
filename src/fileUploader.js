@@ -35,6 +35,7 @@ function FileUploader(options) {
     options.previewEl = validateElement(options.previewEl);
     options.allowMultiple = !!options.allowMultiple;
     options.extraData = options.extraData || {};
+    options.filesParam = options.filesParam || 'files';
 
     this.options = options;
 
@@ -110,7 +111,7 @@ FileUploader.prototype = {
         }
 
         for (i = 0; i < this.files.length; i++) {
-            data.append('files[]', this.files[i]);
+            data.append(this.options.filesParam + '[]', this.files[i]);
         }
 
         for (i = 0; i < extraParams.length; i++) {
