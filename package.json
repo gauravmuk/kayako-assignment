@@ -1,0 +1,19 @@
+{
+  "name": "KayakoAssignment",
+  "version": "1.0.0",
+  "description": "Solves https://www.kayako.com/challenge/twitter-frontend",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.3",
+    "jasmine-ajax": "^3.3.1",
+    "karma": "^1.4.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-ajax": "^0.1.13"
+  },
+  "license": "ISC",
+  "repository": "https://www.kayako.com/challenge/twitter-frontend"
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kayako Assignment</title>
+    <style>
+        .btn {
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="upload-gallery">
+        <input type="button" class="btn" value="Choose Files" onclick="fileUploader.browse();">
+        <input type="button" class="btn" value="Upload Files" onclick="fileUploader.upload();">
+        <div id="preview-gallery"></div>
+    </div>
+    <script src="src/fileUploader.js"></script>
+    <script>
+        var fileUploader = new FileUploader({
+            el: '#upload-gallery',
+            previewEl: '#preview-gallery',
+            multiple: true,
+            accept: 'image/png'
+        });
+    </script>
+</body>
+</html>
